@@ -1,3 +1,7 @@
+This is a fork of a similar package by @robertlabrie 
+
+just added the latest stable version of Splunk Forwarder.
+
 # chocolatey-splunkforwarder
 Splunk forwarder chocolatey package
 
