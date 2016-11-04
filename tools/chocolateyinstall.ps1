@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 
 $packageName = 'splunkforwarder'
-$version = '6.1.11'
-$suffix = '277527' 
+$version = '6.2.12'
+$suffix = '277845' 
 $registryUninstallerKeyName = 'splunkforwarder' #ensure this is the value in the registry
 $installerType = 'MSI'
 $original_url = "https://download.splunk.com/products/universalforwarder/releases/$version/windows"
