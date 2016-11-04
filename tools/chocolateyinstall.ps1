@@ -4,12 +4,14 @@ $ErrorActionPreference = 'Stop';
 
 
 $packageName = 'splunkforwarder'
-$version = '6.4.2'
-$suffix = '00f5bb3fa822' 
+$version = '6.1.11'
+$suffix = '277527' 
 $registryUninstallerKeyName = 'splunkforwarder' #ensure this is the value in the registry
 $installerType = 'MSI'
-$url =   "https://download.splunk.com/products/universalforwarder/releases/$version/windows/$packageName-$version-$suffix-x86-release.msi"
-$url64 = "https://download.splunk.com/products/universalforwarder/releases/$version/windows/$packageName-$version-$suffix-x64-release.msi"
+$original_url = "https://download.splunk.com/products/universalforwarder/releases/$version/windows"
+$internal_url = 'http://ip-172-31-30-47.ap-southeast-2.compute.internal/splunk'
+$url =   "$internal_url/$packageName-$version-$suffix-x86-release.msi"
+$url64 = "$internal_url/$packageName-$version-$suffix-x64-release.msi"
 $silentArgs = '/quiet' # "/s /S /q /Q /quiet /silent /SILENT /VERYSILENT" # try any of these to get the silent installer #msi is always /quiet
 $validExitCodes = @(0)
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
